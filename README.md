@@ -2,7 +2,7 @@
 
 Application web de recherche d'emploi et d'accompagnement aux candidatures (France), avec matching explicable, rédaction assistée et automatisation encadrée.
 
-- **Périmètre actuel** : Sprint 0 — audit et plan d'intégration (aucun code applicatif).
+- **Périmètre actuel** : Sprint 1 — socle web et navigation (données fictives, aucun envoi).
 - **Plateforme** : web uniquement. Pas de Windows natif, Electron ou installateur `.exe`.
 - **Cahier des charges** : [`CandidBoost_IA_Cahier_des_charges_Sprints_OpenCode_Web.pdf`](./CandidBoost_IA_Cahier_des_charges_Sprints_OpenCode_Web.pdf)
 
@@ -22,14 +22,25 @@ Next.js 15 (App Router) + React 19 + TypeScript, Tailwind CSS 4, Zod, PostgreSQL
 
 Détails et alternatives : [`docs/architecture.md`](./docs/architecture.md).
 
-## Démarrage (à partir du Sprint 1)
-
-Aucune commande n'est disponible pour l'instant : le dépôt ne contient pas encore d'application.
+## Démarrage
 
 ```bash
 npm install
-npm run dev
+npm run dev        # http://localhost:3000
 ```
+
+Autres commandes :
+
+```bash
+npm run lint
+npm run typecheck
+npm test
+npm run build
+```
+
+Les pages utilisent uniquement des **données de démonstration fictives**
+(`src/lib/demo/data.ts`). Aucune authentification, base de données, source ou envoi réel n'est
+branché à ce stade.
 
 ## Documentation
 
@@ -44,7 +55,7 @@ npm run dev
 | Sprint | État |
 | --- | --- |
 | 0 — Audit et plan | Terminé |
-| 1 — Socle web et navigation | À venir |
+| 1 — Socle web et navigation | Terminé |
 | 2 à 15 | À venir |
 
-Aucune fonctionnalité produit n'est implémentée avant le Sprint 1.
+Les fonctionnalités produit (profil persistant, API, sources, IA, envoi) démarrent au Sprint 2.

@@ -5,6 +5,22 @@ Source : `CandidBoost_IA_Cahier_des_charges_Sprints_OpenCode_Web.pdf` (v1.1, 23 
 
 ## 1. État actuel du dépôt
 
+### 1.1 Au Sprint 1
+
+| Élément | État |
+| --- | --- |
+| Code applicatif | Next.js 15 (App Router) + React 19 + TypeScript |
+| Styles | Tailwind CSS 4 (PostCSS) |
+| Scripts | `dev`, `build`, `start`, `lint`, `typecheck`, `test` |
+| Tests UI | Vitest + Testing Library (11 tests) |
+| Pages | Tableau de bord, Profil, Offres, Entreprises, Candidatures, Automatisations, Statistiques, Paramètres |
+| Données | Fictives, isolées dans `src/lib/demo/data.ts`, bannière de démonstration sur chaque page |
+| Auth / base / API / envoi | Non implémentés (Sprints 2 à 10) |
+| Déploiement / CI | Non implémentés (Sprint 14) |
+| Documentation | Architecture, roadmap, risques, ADR 0001 à 0005 |
+
+### 1.2 Au Sprint 0 (audit initial)
+
 Audit du dépôt `artemys37/PremierCap` au démarrage du Sprint 0 :
 
 | Élément | État |
@@ -142,16 +158,19 @@ Chaque entité liée à un candidat est cloisonnée par propriétaire (`user_id`
 
 ## 9. Environnements et commandes
 
-Aucune commande n'existe encore (pas de `package.json`). À créer au Sprint 1 :
+Depuis le Sprint 1 :
 
 ```bash
 npm install
-npm run dev      # développement local
-npm run lint     # ESLint
-npm run typecheck
-npm test         # tests unitaires/intégration
-npm run build    # build de production
+npm run dev        # développement local (http://localhost:3000)
+npm run lint       # ESLint
+npm run typecheck  # TypeScript strict
+npm test           # tests UI Vitest + Testing Library
+npm run build      # build de production
 ```
+
+Les données affichées sont fictives et isolées dans `src/lib/demo/data.ts`. Aucune donnée réelle
+n'est utilisée par l'interface du Sprint 1.
 
 Environnements cibles : `local`, `staging`, `production`. Secrets côté serveur, migrations contrôlées, sauvegardes, health checks et rollback documentés au Sprint 14.
 

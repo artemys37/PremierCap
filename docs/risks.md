@@ -31,6 +31,7 @@ Niveaux : **Critique**, **Élevé**, **Moyen**, **Faible**.
 | R16 | Dépôt vide : aucune base de code, aucun test, aucun historique technique | Initialiser au Sprint 1 avec une base minimale testée, puis sprints incrémentaux |
 | R17 | Stack non validée (hébergement, base, email, IA) | Trancher les questions ouvertes de `docs/architecture.md` avant le Sprint 3 |
 | R18 | Absence de CI dès le départ | Mettre en place lint/types/tests/build dès le Sprint 1 |
+| R19 | Vulnérabilités npm de `postcss` embarqué par Next.js 15 (audit npm) | Suivre les correctifs ; la correction automatique propose Next.js 16, écarté pour l'instant (crash VM constaté). Réévaluer avant la production (Sprint 13/14) |
 
 ## Suivi
 
