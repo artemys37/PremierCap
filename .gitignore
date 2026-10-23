@@ -1,0 +1,29 @@
+# Dépendances
+/node_modules
+/.pnp
+.pnp.*
+
+# Next.js
+/.next/
+/out/
+/build
+next-env.d.ts
+*.tsbuildinfo
+
+# Environnement
+.env
+.env.*
+!.env.example
+
+# Tests et couverture
+/coverage
+/playwright-report
+/test-results
+
+# Logs et divers
+*.log
+.DS_Store
+.vercel
+
+# Documents générés / temporaires
+/tmp
